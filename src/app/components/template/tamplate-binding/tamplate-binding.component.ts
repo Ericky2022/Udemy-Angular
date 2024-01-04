@@ -21,6 +21,7 @@ export class TamplateBindingComponent {
       this.name = 'João e Maria';
     }, 1000);
   }
+  public isTextDecoration = this.age >= 32 ? 'underline' : 'none';
   public sum(val1: number, val2: number){
     return val1 + val2;
   }
