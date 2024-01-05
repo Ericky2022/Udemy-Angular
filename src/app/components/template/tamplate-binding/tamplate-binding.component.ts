@@ -17,12 +17,29 @@ export class TamplateBindingComponent {
   public srcValue = "https://vidafullstack.com.br/wp-content/uploads/2022/04/Aprenda-o-que-e-Databinding-com-Angular-1080x675.jpg";
 
   constructor(){
-    setTimeout( ()=>{
-      this.name = 'João e Maria';
-    }, 1000);
+    // setTimeout( ()=>{
+    //   this.name = 'João e Maria';
+    // }, 1000);
   }
   public isTextDecoration = this.age >= 32 ? 'underline' : 'none';
-  public sum(val1: number, val2: number){
-    return val1 + val2;
+
+  public sum(){
+    return this.age++;
   }
+
+  public sub(){
+    return this.age--;
+  }
+
+  public onKeydown(event: Event){
+    return console.log(event);
+  }
+
+  public onMouseMove(event: MouseEvent){
+    return console.log({
+      clietX: event.clientX,
+      clietY: event.clientY,
+    });
+  }
+
 }

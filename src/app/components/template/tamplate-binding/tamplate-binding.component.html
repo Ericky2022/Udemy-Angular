@@ -2,7 +2,7 @@
 <h3>Text Interpolation</h3>
 <p>
   {{ name }} tem {{ age }} anos.
-  {{ sum(1, 2)}}
+  <!-- {{ sum(1, 2)}} -->
 </p>
 
 <p>{{ condition }}</p>
@@ -17,7 +17,18 @@
 <h2>Attribute binding</h2>
 <p [attr.title]="name" [attr.aria-label]="name">Erivaldo Santana</p>
 <hr />
-<h2>Class and style binding</h2>
-<p [class.bachground-red]="true" [class.bachground-red]="age >= 32">{{ name }}</p>
+<h2>Class and Style binding</h2>
+<p [class.background-red]="age > 32" [class.background-blue]="age < 32">{{ name }}</p>
 
 <p [style.text-decoration]="isTextDecoration"> {{ age }} </p>
+
+<hr />
+
+<h2>Event binding</h2>
+
+<button (click)="sum()">+</button>
+<button (click)="sub()">-</button>
+<input (keydown.shift.t)="onKeydown($event)">
+
+<div style="background: red; width: 300px; height: 300px; margin-top: 10px;"
+(mousemove)="onMouseMove($event)"></div>
