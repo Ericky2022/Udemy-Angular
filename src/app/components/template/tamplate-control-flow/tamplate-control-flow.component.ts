@@ -12,7 +12,8 @@ import { Observable, delay, of } from 'rxjs';
 export class TamplateControlFlowComponent {
 
   public isTrue: boolean = true;
-
+  public itens = [{ name: 'Erivaldo Santana' }];
+  public itens2: Array<{name: string}> = [];
   public loadingData$: Observable<string[]> = of([
     'item 1',
     'item 2',
@@ -21,5 +22,9 @@ export class TamplateControlFlowComponent {
 
   public trackByFn(index: number){
     return index;
+  }
+
+  public addNewName(value: string){
+    return this.itens.push({ name: value});
   }
 }
