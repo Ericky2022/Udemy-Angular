@@ -12,6 +12,7 @@ import { Observable, delay, of } from 'rxjs';
 export class TamplateControlFlowComponent {
 
   public isTrue: boolean = true;
+  public switchCondition = 'C';
   public itens = [{ name: 'Erivaldo Santana' }];
   public itens2: Array<{name: string}> = [];
   public loadingData$: Observable<string[]> = of([
